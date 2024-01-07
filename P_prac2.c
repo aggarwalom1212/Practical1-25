@@ -1,20 +1,21 @@
 #include <stdio.h>
     float cel_to_far(float celc)
         {
-	          return (celc * (9/5) + 32);
+	     return (celc * (9.0/5) + 32);
         }
     float far_to_cel(float far)
         {
-	          return ((far-32)*(5/9));
+	     return ((far-32)*(5.0/9));
         }
-    void main()
+    int main()
         {
-	          float celc;
-		  float far;
-	          printf("Enter temperature in celcius: ");
-	          scanf("%f",celc);
-	          printf("entered temperaturein farenhiet: %f",cel_to_far(celc))
-	          printf('Enter temperature in farenhiet: ');
-	          scanf("%f",far);
-	          printf("entered temperaturein farenhiet: %f",far_to_cel(far))
+	     float c;
+             float f;
+	     printf("Enter temperature in celcius: ");
+             scanf("%f", &c);
+             printf("in farenhiet = %f",cel_to_far(c));
+             printf("\nEnter temperature in farenhiet: ");
+             scanf("%f", &f);
+             printf("in celcius = %f",far_to_cel(f));
+	     return 0;
         }
